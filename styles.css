@@ -1,0 +1,38 @@
+body {
+    background-color: #F8DFE6;
+    color: #383739;
+}
+
+body header {
+    background-color: #F6E6FC;
+}
+
+.top-section {
+    border: 3px solid #ABA0B0;
+    display: inline-block;
+    color: rgb(111, 0, 255)
+}
+
+#funny {
+    color: blue;
+    background-color: #F6E6FC;
+}
+
+#intro{
+    color: blue
+}
+
+.silly {
+    float: right;
+}
+
+.sillyimage {
+    float: left;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;            /* Footer height */
+  }
