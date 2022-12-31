@@ -15,6 +15,7 @@ if (userTalk == "yes") {
     } else if(userInput == true){
         let userName = prompt("My cats are excited to meet you! What is your name?");
         console.log(userName);
+        // make the name letter capital
         document.write(userName + ", Welcome!");
     }
 } 
