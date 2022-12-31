@@ -19,7 +19,7 @@ body header {
 }
 
 #intro{
-    color: blue
+    color: #FF44AA;
 }
 
 .silly {
@@ -36,3 +36,4 @@ body header {
     width: 100%;
     height: 2.5rem;            /* Footer height */
   }
+
