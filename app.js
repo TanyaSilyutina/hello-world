@@ -1,6 +1,7 @@
 'use strict';
 let userTalk;
 let userName;
+let rating;
 
 userTalk = loveCatsCheck();
 console.log(userTalk);
@@ -24,6 +25,7 @@ if (userTalk == "yes" || userTalk == "ok" || userTalk == "okay") {
     }
 } 
 
+
 function loveCatsCheck(){
     userTalk = prompt("Do you like cats?");
     userTalk = userTalk.toLowerCase();
@@ -33,14 +35,25 @@ function loveCatsCheck(){
 
 function askName(){
     userName = prompt("What is your name?");
-    //add loop
-    //check for numbers and empty strings
+
+    //check for numbers and space filled strings
     //make name capital
-    if(userName == null || userName == ""){
+
+    while(!userName){
         userName = prompt("Error: no name detected. Please enter your name:");
-        return userName;
-    } else {   
-        return userName;
+    }
+    return userName;
+}
+
+function rateCats(){
+    rating = prompt("On the scale of 0 - 10, how much did you like interacting with my website?");
+    console.log(rating);
+    while(rating > 10 || rating < 0){
+        rating = prompt("Error. Please pick the number from 0 to 10: ");    
+    }
+
+    for(let i = 0; i < rating; i++){
+        document.write("<img style='width:200px;' src='photos/nataliebag.jpg' alt='funny cat picture' />");
     }
 }
 
