@@ -1,9 +1,13 @@
-let userTalk = prompt("Do you like cats?");
-userTalk = userTalk.toLowerCase();
+'use strict';
+let userTalk;
+let userName;
+
+userTalk = loveCatsCheck();
 console.log(userTalk);
 
-if (userTalk == "yes") {
-    let userName = prompt("We love cats too! What is your name?");
+if (userTalk == "yes" || userTalk == "ok" || userTalk == "okay") {
+    alert("We love cats too!");
+    let userName = askName();
     console.log(userName);
     document.write(userName + ", fellow cat lover, my cats are excited to have you here! WELCOME!");
 } else {
@@ -13,9 +17,30 @@ if (userTalk == "yes") {
         alert("No worries, cats are not for everyone! The dogs' website will open next, learn about dogs instead!");
         location.href = 'https://www.dogster.com/';
     } else if(userInput == true){
-        let userName = prompt("My cats are excited to meet you! What is your name?");
+        alert("My cats are excited to meet you!");
+        userName = askName();
         console.log(userName);
-        // make the name letter capital
-        document.write(userName + ", Welcome!");
+        document.write(userName + ", welcome!");
     }
 } 
+
+function loveCatsCheck(){
+    userTalk = prompt("Do you like cats?");
+    userTalk = userTalk.toLowerCase();
+    console.log(userTalk);
+    return userTalk;
+}
+
+function askName(){
+    userName = prompt("What is your name?");
+    //add loop
+    //check for numbers and empty strings
+    //make name capital
+    if(userName == null || userName == ""){
+        userName = prompt("Error: no name detected. Please enter your name:");
+    } else {   
+        return userName;
+    }
+}
+
+
