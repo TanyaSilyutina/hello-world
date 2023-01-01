@@ -38,6 +38,7 @@ function askName(){
     //make name capital
     if(userName == null || userName == ""){
         userName = prompt("Error: no name detected. Please enter your name:");
+        return userName;
     } else {   
         return userName;
     }
